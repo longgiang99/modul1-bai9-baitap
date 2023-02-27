@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>do chi so BMI</title>
+</head>
+<body>
+<h1>Tính chỉ số cân nặng</h1>
+<table>
+<!--tao bang nhap chieu cao can nang voi thuoc tinh la nhap so va gan id cho no-->
+<label>nhap can nang(kg):     </label>
+<input type="number" name="" id="cannang">
+<br>
+    <br>
+
+<label>nhap chieu cao(cm):</label>
+<input type="number" name="" id="chieucao">
+</table>
+<button onclick="kiemtra()">kiem tra</button>
+<!--o khai bao ket qua gan cho no 1 id-->
+<p id="ketqua">chi so BMI la: </p>
+<script>
+    // khai bao hamf function voi ten la hanh dong onclick
+    function kiemtra() {
+        // khai bao can nang chieu cao
+        let cannang = document.getElementById('cannang').value;
+        let chieucao = document.getElementById('chieucao').value;
+        // khai bao cong thuc
+        let chieucao2 = (chieucao * 2)
+        let bmi = (cannang / chieucao2)
+
+        // dat dieu kien
+        if (bmi <= 18) {
+            document.getElementById('ketqua').innerHTML = "gay";
+        } else if (bmi <= 25.0) {
+            document.getElementById('ketqua').innerHTML = "binh thuong";
+        } else if (bmi <= 30.0) {
+            document.getElementById('ketqua').innerHTML = "hoi beo";
+        } else {
+            document.getElementById('ketqua').innerHTML = "qua beo";
+        }
+
+    }
+</script>
+
+</body>
+</html>
