@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>kiem tra so ngay trong thang</h1>
+<input type="number"  id="checkthang">
+<button onclick="check()">kiemtra</button>
+
+<p id="ketqua">ketqua</p>
+<script>
+    function check() {
+        let m=parseFloat(prompt(document.getElementById("checkthang")));
+      switch (m){
+          case 4: case 6: case 9: case 11:
+              document.getElementById("ketqua").innerHTML = "thang" +m+"co 30 ngay";
+              break;
+          case 2: document.getElementById("ketqua").innerHTML = "thang" +m+ "co 28 hoac 29 ngay";
+            break;
+          case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+              document.getElementById("ketqua").innerHTML = "thang" +m+"co 31 ngay";
+              break;
+
+          default:
+              document.getElementById("ketqua").innerHTML= "vui long nhap lai thang";
+      }
+    }
+</script>
+</body>
+</html>
