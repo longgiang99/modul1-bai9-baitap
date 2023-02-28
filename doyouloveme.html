@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>do you love me</title>
+
+</head>
+<body>
+<h1>do you love me?</h1>
+<button onclick="a()">yes</button>
+<button onmouseover="kyd()" style="position: absolute" id="khong">no</button>
+<p id="yes"></p>
+
+<script>
+    function a(){
+        document.getElementById('yes').innerHTML ='<3'
+    }
+    function kyd() {
+        let x = Math.random() * window.innerWidth;
+        let y = Math.random() * window.innerHeight;
+        document.getElementById('khong').style.top = x + 'px';
+        document.getElementById('khong').style.left = y + 'px';
+    }
+
+</script>
+</body>
+</html>
