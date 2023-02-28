@@ -7,12 +7,13 @@
 <body>
 <h1>kiem tra so ngay trong thang</h1>
 <input type="number"  id="checkthang">
-<button onclick="check()">kiemtra</button>
+<button type="submit" onclick="check()">kiemtra</button>
 
 <p id="ketqua">ketqua</p>
 <script>
     function check() {
-        let m=parseFloat(prompt(document.getElementById("checkthang")));
+        let m=parseFloat(document.getElementById("checkthang").value);
+
       switch (m){
           case 4: case 6: case 9: case 11:
               document.getElementById("ketqua").innerHTML = "thang" +m+"co 30 ngay";
